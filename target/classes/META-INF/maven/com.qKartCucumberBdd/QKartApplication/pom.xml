@@ -68,6 +68,12 @@
 			<version>7.22.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit-platform-engine</artifactId>
+			<version>7.22.0</version>
+			<scope>test</scope>
+		</dependency>
 		<!--
 			https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
 		<dependency>
@@ -143,6 +149,11 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.3.0</version>
+					<configuration>
+						<includes>
+							<include>**/Run.java</include>
+						</includes>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
